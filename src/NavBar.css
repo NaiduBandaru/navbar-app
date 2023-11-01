@@ -1,0 +1,113 @@
+/* NavBar.css */
+
+/* Styles for larger screens */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px; /* Add left and right padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Expand to take available space on the left */
+    transition: margin-right 0.3s; /* Add transition property */
+  }
+  
+  .site-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    margin-right: 0; /* Remove right margin for smaller screens */
+    cursor: pointer; /* Add pointer cursor for hover effect */
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #FFD700;
+  }
+  
+  /* Styles for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      background-color: #333; /* Background color for mobile view */
+      padding: 10px 20px; /* Add left and right padding */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+  
+    .brand {
+      margin: 10px 0;
+      text-align: left; /* Align text to the left */
+    }
+  
+    .nav-list {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-list.show {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .bar {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  
+    .bar.change {
+      background-color: #FFD700;
+    }
+  
+    .site-name {
+      cursor: pointer; /* Add pointer cursor for hover effect */
+    }
+  
+    .site-name:hover::before {
+      content: "Menu";
+      display: inline-block;
+      margin-right: 10px; /* Add space between "Menu" and the site name */
+      color: #FFD700; /* Change the color on hover */
+      font-weight: normal; /* Adjust font weight */
+    }
+  }
+  
